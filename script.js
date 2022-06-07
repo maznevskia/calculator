@@ -28,3 +28,7 @@ function operate(operator, a, b) {
         divide(a, b);
     }
 }
+
+function operations(element) {
+    console.log(element.id);
+}

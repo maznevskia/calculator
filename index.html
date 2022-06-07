@@ -17,33 +17,33 @@
         </div>
         <div id="numpad">
             <div class="row">
-                <button class="extras" id="clear">AC</button>
-                <button class="extras" id="convert">+/-</button>
-                <button class="extras" id="module">%</button>
-                <button class="operators">/</button>
+                <button class="extras" id="clear" onclick="operations(this)">AC</button>
+                <button class="extras" id="convert" onclick="operations(this)">+/-</button>
+                <button class="extras" id="module" onclick="operations(this)">%</button>
+                <button class="operators" id="divide" onclick="operations(this)">/</button>
             </div>
             <div class="row">
-                <button class="numbers">7</button>
-                <button class="numbers">8</button>
-                <button class="numbers">9</button>
-                <button class="operators">*</button>    
+                <button class="numbers" id="seven" onclick="operations(this)">7</button>
+                <button class="numbers" id="eight" onclick="operations(this)">8</button>
+                <button class="numbers" id="nine" onclick="operations(this)">9</button>
+                <button class="operators" id="times" onclick="operations(this)">*</button>    
             </div>
             <div class="row">
-                <button class="numbers">4</button>
-                <button class="numbers">5</button>
-                <button class="numbers">6</button>
-                <button class="operators">-</button>
+                <button class="numbers" id="four" onclick="operations(this)">4</button>
+                <button class="numbers" id="five" onclick="operations(this)">5</button>
+                <button class="numbers" id="six" onclick="operations(this)">6</button>
+                <button class="operators" id="minus" onclick="operations(this)">-</button>
             </div>
             <div class="row">
-                <button class="numbers">1</button>
-                <button class="numbers">2</button>
-                <button class="numbers">3</button>
-                <button class="operators">+</button>
+                <button class="numbers" id="one" onclick="operations(this)">1</button>
+                <button class="numbers" id="two" onclick="operations(this)">2</button>
+                <button class="numbers" id="three" onclick="operations(this)">3</button>
+                <button class="operators" id="plus" onclick="operations(this)">+</button>
             </div>
             <div class="row row-5">
-                <button class="numbers" id="zero">0</button>
-                <button class="numbers" id="point">.</button>
-                <button class="operators" id="equal">=</button>
+                <button class="numbers" id="zero" onclick="operations(this)">0</button>
+                <button class="numbers" id="point" onclick="operations(this)">.</button>
+                <button class="operators" id="equal" onclick="operations(this)">=</button>
             </div>
         </div>
     </div>

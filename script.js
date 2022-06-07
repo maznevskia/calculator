@@ -29,6 +29,11 @@ function operate(operator, a, b) {
     }
 }
 
+document.addEventListener('keypress', (event) => {
+    let pressedKey = event.key;
+    console.log(`${pressedKey}`);
+  }, false);
+
 function operations(element) {
     console.log(element.id);
 }

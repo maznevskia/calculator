@@ -85,6 +85,7 @@ function operations(element) {
     }
 
     else {
-        number.innerText += element.innerText;
+        if (number.innerText.includes('.') && element.innerText == '.') return
+        else number.innerText += element.innerText;
     }
 }

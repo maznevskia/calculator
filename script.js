@@ -52,12 +52,11 @@ function operations(element) {
 
         if (element.id == 'delete') {
             if (+number.innerText > 0) {
-                let num = Math.floor(+number.innerText / 10);
-                number.innerText = num;
+                number.innerText = number.innerText.slice(0, -1);
                 return;
             }
         }
-        
+
         let operator = element.innerText;
 
         if (!tempOperator && operator != '=') {

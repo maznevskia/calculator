@@ -34,6 +34,19 @@ document.addEventListener('keypress', (event) => {
     console.log(`${pressedKey}`);
   }, false);
 
+let temp = 0;
+
 function operations(element) {
-    console.log(element.id);
+    if (element.id == 'clear') {
+        number.innerText = '0';
+    }
+
+    else if (number.innerText == 0) {
+        number.innerText = element.innerText;
+    }
+
+    else {
+        number.innerText += element.innerText;
+    }
+
 }

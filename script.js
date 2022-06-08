@@ -15,17 +15,17 @@ function divide(a, b) {
 }
 
 function operate(operator, a, b) {
-    if(operate == '+'){
-        add(a, b);
+    if(operator == '+'){
+        return add(a, b);
     }
-    else if(operate == '-'){
-        subtract(a, b);
+    else if(operator == '-'){
+        return subtract(a, b);
     }
-    else if(operate == '*'){
-        multiply(a, b);
+    else if(operator == '*'){
+        return multiply(a, b);
     }
-    else if(operate == '/'){
-        divide(a, b);
+    else if(operator == '/'){
+        return divide(a, b);
     }
 }
 
@@ -34,11 +34,51 @@ document.addEventListener('keypress', (event) => {
     console.log(`${pressedKey}`);
   }, false);
 
-let temp = 0;
+let tempNumber = 0;
+let tempOperator = '';
 
 function operations(element) {
     if (element.id == 'clear') {
         number.innerText = '0';
+        tempNumber = 0;
+        tempOperator = '';
+    }
+
+    else if(element.id == 'convert') {
+        number.innerText = +number.innerText * -1;
+    }
+
+    else if (element.className == 'operators' || element.id == 'delete') {
+
+        if (element.id == 'delete') {
+            if (+number.innerText > 0) {
+                let num = Math.floor(+number.innerText / 10);
+                number.innerText = num;
+                return;
+            }
+        }
+        
+        let operator = element.innerText;
+
+        if (!tempOperator && operator != '=') {
+            tempOperator = operator;
+        }
+
+        if (operator == '=') {
+            number.innerText = operate(tempOperator, tempNumber, +number.innerText);
+        }
+        
+        else {
+            if (tempNumber == 0) {
+                tempNumber = +number.innerText;
+            }
+            else {
+                tempNumber = operate(tempOperator, tempNumber, +number.innerText);
+            }
+            number.innerText = '';
+
+            tempOperator = operator;
+        }
     }
 
     else if (number.innerText == 0) {
@@ -48,5 +88,4 @@ function operations(element) {
     else {
         number.innerText += element.innerText;
     }
-
 }

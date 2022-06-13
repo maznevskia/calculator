@@ -1,16 +1,28 @@
+function expo(x, f) {
+    return Number.parseFloat(x).toExponential(f);
+}
+
 function add(a, b) {
+    if ( a + b > 99999999)
+        return(expo(a + b, 5));
     return(a + b);
 }
 
 function subtract(a, b) {
+    if ( a - b > 99999999)
+        return(expo(a - b, 5));
     return(a - b);
 }
 
 function multiply(a, b) {
+    if ( a * b > 99999999)
+        return(expo(a * b, 5));
     return(a * b);
 }
 
 function divide(a, b) {
+    if ( a / b > 99999999)
+        return(expo(a / b, 5));
     return(a / b);
 }
 

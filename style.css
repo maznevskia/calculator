@@ -32,6 +32,7 @@
     margin: 10px;
     border: 10px solid black;
     text-align-last: right;
+    overflow: hidden;
 }
 
 #number {

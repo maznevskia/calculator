@@ -29,27 +29,68 @@ function operate(operator, a, b) {
     }
 }
 
-document.addEventListener('keypress', (event) => {
+//Keyboard Integration
+document.addEventListener('keyup', (event) => {
     let pressedKey = event.key;
     console.log(`${pressedKey}`);
+    if (pressedKey == 1)
+        document.getElementById("one").click();
+    if (pressedKey == 2)
+        document.getElementById("two").click();
+    if (pressedKey == 3)
+        document.getElementById("three").click();
+    if (pressedKey == 4)
+        document.getElementById("four").click();
+    if (pressedKey == 5)
+        document.getElementById("five").click();
+    if (pressedKey == 6)
+        document.getElementById("six").click();
+    if (pressedKey == 7)
+        document.getElementById("seven").click();
+    if (pressedKey == 8)
+        document.getElementById("eight").click();
+    if (pressedKey == 9)
+        document.getElementById("nine").click();
+    if (pressedKey == 0)
+        document.getElementById("zero").click();
+    if (pressedKey == '+')
+        document.getElementById("plus").click();
+    if (pressedKey == '-')
+        document.getElementById("minus").click();
+    if (pressedKey == '*')
+        document.getElementById("times").click();
+    if (pressedKey == '/')
+        document.getElementById("divide").click();
+    if (pressedKey == '=' || pressedKey == 'Enter')
+        document.getElementById("equal").click();
+    if (pressedKey == 'c')
+        document.getElementById("clear").click();
+    if (pressedKey == 'Backspace')
+        document.getElementById("delete").click();
+    if (pressedKey == '.')
+        document.getElementById("point").click();
   }, false);
 
 let tempNumber = 0;
 let tempOperator = '';
 
 function operations(element) {
+    //AC
     if (element.id == 'clear') {
         number.innerText = '0';
         tempNumber = 0;
         tempOperator = '';
     }
 
+    //+/-
     else if(element.id == 'convert') {
         number.innerText = +number.innerText * -1;
     }
 
+
     else if (element.className == 'operators' || element.id == 'delete') {
 
+        //Delete Last Number
         if (element.id == 'delete') {
             if (+number.innerText > 0) {
                 number.innerText = number.innerText.slice(0, -1);

@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.github:before {
+    content: "\f09b";
+}
+
 @font-face {
     font-family: 'calculatorFont';
     src: url('./fonts/digital-7.regular.ttf');
@@ -62,6 +66,10 @@ button {
     font-family: 'Times New Roman';
 }
 
+button:hover {
+    transform: scale(1.02);
+}
+
 #zero {
     width: 239px;
 }
@@ -74,3 +82,26 @@ button {
 #equal { background-color: greenyellow; }
 
 #clear { background-color: red; }
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 15px;
+    font-size: 20px;
+}
+  
+.github {
+    color: black;
+    font-size: 24px;
+    transition: transform 0.3s ease-in-out;
+}
+  
+.github:hover {
+    transform: rotate(360deg) scale(1.2);
+}

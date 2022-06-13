@@ -3,27 +3,31 @@ function expo(x, f) {
 }
 
 function add(a, b) {
-    if ( a + b > 99999999)
-        return(expo(a + b, 5));
-    return(a + b);
+    n = a + b;
+    if ( n > 99999999)
+        return(expo(Math.round((n + Number.EPSILON) * 100) / 100, 5));
+    return(Math.round((n + Number.EPSILON) * 100) / 100);
 }
 
 function subtract(a, b) {
-    if ( a - b > 99999999)
-        return(expo(a - b, 5));
-    return(a - b);
+    n = a - b;
+    if ( n > 99999999)
+    return(expo(Math.round((n + Number.EPSILON) * 100) / 100, 5));
+    return(Math.round((n + Number.EPSILON) * 100) / 100);
 }
 
 function multiply(a, b) {
-    if ( a * b > 99999999)
-        return(expo(a * b, 5));
-    return(a * b);
+    n = a * b;
+    if ( n > 99999999)
+        return(expo(Math.round((n + Number.EPSILON) * 100) / 100, 5));
+    return(Math.round((n + Number.EPSILON) * 100) / 100);
 }
 
 function divide(a, b) {
-    if ( a / b > 99999999)
-        return(expo(a / b, 5));
-    return(a / b);
+    n = a / b;
+    if ( n > 99999999)
+        return(expo(Math.round((n + Number.EPSILON) * 100) / 100, 5));
+    return(Math.round((n + Number.EPSILON) * 100) / 100);
 }
 
 function operate(operator, a, b) {
@@ -87,6 +91,8 @@ let tempNumber = 0;
 let tempOperator = '';
 
 function operations(element) {
+    Math.round(( + Number.EPSILON) * 100) / 100
+
     //AC
     if (element.id == 'clear') {
         number.innerText = '0';

@@ -64,7 +64,9 @@ function operations(element) {
         }
 
         if (operator == '=') {
-            number.innerText = operate(tempOperator, tempNumber, +number.innerText);
+            if (tempOperator != '') {
+                number.innerText = operate(tempOperator, tempNumber, +number.innerText);
+            }
         }
         
         else {

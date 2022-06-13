@@ -91,8 +91,6 @@ let tempNumber = 0;
 let tempOperator = '';
 
 function operations(element) {
-    Math.round(( + Number.EPSILON) * 100) / 100
-
     //AC
     if (element.id == 'clear') {
         number.innerText = '0';
@@ -125,6 +123,8 @@ function operations(element) {
         if (operator == '=') {
             if (tempOperator != '') {
                 number.innerText = operate(tempOperator, tempNumber, +number.innerText);
+                tempNumber = 0;
+                tempOperator = '';
             }
         }
         

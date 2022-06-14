@@ -42,12 +42,14 @@
 #number {
     font-size: 100px;
     font-family: "calculatorFont";
+    height: 80px;
 }
 
 #numpad {
     padding: 0 10px 10px;
     display: grid;
     grid-gap: 1px;
+    font-family: 'Lato';
 }
 
 .row {
@@ -63,7 +65,6 @@ button {
     border-radius: 8px;
     font-weight: 400;
     font-size: 3em;
-    font-family: 'Times New Roman';
 }
 
 button:hover {
@@ -74,14 +75,12 @@ button:hover {
     width: 239px;
 }
 
-.numbers,
-.extras { background-color: lightskyblue; }
+.numbers { background-color: #808080; color: white;}
+.extras,
+#clear { background-color: #d4d4d2; }
 
-.operators { background-color: orange; }
-
-#equal { background-color: greenyellow; }
-
-#clear { background-color: red; }
+.operators,
+#equal { background-color: #ff9f0a; color: white;}
 
 .footer {
     position: absolute;
